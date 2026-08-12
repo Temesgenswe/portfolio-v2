@@ -1,0 +1,338 @@
+// ─── NAVIGATION PAGES ──────────────────────────────────────────────────────
+export const pages = ['Home', 'About', 'Experience', 'Projects', 'Skills', 'Certifications', 'Education', 'Contact'];
+
+// ─── HERO DATA ──────────────────────────────────────────────────────────────
+export const hero = {
+  name: 'Temesgen Teshome',
+  titles: ['Business Analyst', 'Software Engineering Lecturer', 'Digital Strategist', 'Entrepreneur'],
+  tagline: 'Bridging Technology, Academia & Business Strategy',
+  description: 'A multidisciplinary technology leader based in Debre Berhan, Ethiopia — driving digital transformation, academic excellence, and entrepreneurial ventures across software engineering, data analytics, and business development.',
+  email: 'temesgendbu@gmail.com',
+  phone: '+251 922 941 367',
+  location: 'Debre Berhan, Ethiopia',
+  available: true,
+};
+
+// ─── STATS ──────────────────────────────────────────────────────────────────
+export const stats = [
+  { num: '6+', label: 'Years Experience', icon: 'Clock' },
+  { num: '21', label: 'Enterprises Mentored', icon: 'Building2' },
+  { num: '2', label: 'Companies Founded', icon: 'Rocket' },
+  { num: '8+', label: 'Certifications & Awards', icon: 'Award' },
+];
+
+// ─── EXPERIENCE ─────────────────────────────────────────────────────────────
+export const experience = [
+  {
+    id: 1,
+    period: 'Dec 2025 – Present',
+    role: 'General Manager & Digital Marketing Consultant',
+    org: 'Digital Marketing Linkage Lab — SEED Program',
+    location: 'Debre Berhan, Ethiopia',
+    tag: 'Current',
+    tagColor: '#10b981',
+    category: 'Industry',
+    description: 'Led the Digital Market Linkage Lab Initiative under the SEED program (MasterCard Foundation / EDI), supporting medium enterprises in digital transformation.',
+    points: [
+      'Led the Digital Market Linkage Lab Initiative under the SEED program (MasterCard Foundation / EDI)',
+      'Supported 21 medium enterprises in strengthening digital market presence and business growth',
+      'Designed digital strategies: social media (Facebook, Telegram, TikTok), branding, campaigns',
+      'Managed training sessions, enterprise mentorship, and digital capacity-building programs',
+    ],
+  },
+  {
+    id: 2,
+    period: 'Jan 2024 – Present',
+    role: 'General Manager',
+    org: 'gCODE Technologies',
+    location: 'Debre Berhan, Ethiopia',
+    tag: 'Founder',
+    tagColor: '#f59e0b',
+    category: 'Entrepreneurship',
+    description: 'Founded and lead gCODE Technologies, a digital solutions company delivering software development and IT consulting services.',
+    points: [
+      'Lead overall company strategy, operations, and business development initiatives',
+      'Managed digital solutions, software development, and IT service delivery projects',
+      'Built partnerships and managed client relationships to expand business opportunities',
+      'Provided digital transformation and technology consulting services',
+    ],
+  },
+  {
+    id: 3,
+    period: 'Jan 2024 – Present',
+    role: 'Business Analyst (Requirement Engineer)',
+    org: 'Qelem Meda Technologies',
+    location: 'Addis Ababa, Ethiopia (Remote)',
+    tag: 'Remote',
+    tagColor: '#3b82f6',
+    category: 'Industry',
+    description: 'Leading requirements engineering for enterprise systems including HRMS and Student/Teacher Information Management Systems.',
+    points: [
+      'Gathered requirements for HRMS, Student & Teacher Information Management Systems',
+      'Created AS-IS / TO-BE process models using Lucidchart, Draw.io, Bizagi Modeler',
+      'Facilitated Agile/Scrum: stand-ups, sprint planning, backlog grooming via Jira & Confluence',
+      'Designed UAT scenarios and coordinated QA teams for successful deployments',
+      'Developed 3-year strategic directive for Qelem Meda Technologies',
+    ],
+  },
+  {
+    id: 4,
+    period: 'Oct 2024 – Present',
+    role: 'President, Board of Directorate',
+    org: 'Dejeselam Trading and Apartama S.C',
+    location: 'Debre Berhan, Ethiopia',
+    tag: 'Part-time',
+    tagColor: '#8b5cf6',
+    category: 'Leadership',
+    description: 'Providing strategic leadership and corporate governance oversight to a multi-sector trading and real estate company.',
+    points: [
+      'Provided strategic leadership, chaired board meetings, and led high-level governance decisions',
+      'Oversaw corporate strategy, annual plans, and senior management performance evaluation',
+      'Ensured compliance with regulatory requirements and corporate governance standards',
+      'Represented the company in shareholder assemblies and regulatory bodies',
+    ],
+  },
+  {
+    id: 5,
+    period: 'Jan 2022 – Mar 2025',
+    role: 'Department Head, Software Engineering',
+    org: 'Debre Berhan University',
+    location: 'Debre Berhan, Ethiopia',
+    tag: 'Leadership',
+    tagColor: '#06b6d4',
+    category: 'Academic',
+    description: 'Led the Software Engineering department, overseeing curriculum development, staff management, and academic quality assurance.',
+    points: [
+      'Provided strategic and operational leadership to the Computing College department',
+      'Developed departmental plans, budgets, and performance targets',
+      'Supervised and coached staff; promoted teamwork, accountability, and continuous improvement',
+      'Led process optimization and innovation initiatives across academic programs',
+    ],
+  },
+  {
+    id: 6,
+    period: 'Nov 2019 – Present',
+    role: 'Lecturer, Software Engineering',
+    org: 'Debre Berhan University',
+    location: 'Debre Berhan, Ethiopia',
+    tag: 'Academia',
+    tagColor: '#ec4899',
+    category: 'Academic',
+    description: 'Teaching undergraduate Software Engineering courses while conducting research in fog computing and digital systems.',
+    points: [
+      'Delivered undergraduate Software Engineering courses (basic, core and advanced levels)',
+      'Supervised senior projects and mentored undergraduate students',
+      'Led community service and applied research in digital systems development',
+      'Published: Task Scheduling Algorithm to Reduce Response Time Over Fog Computing Environment',
+    ],
+  },
+  {
+    id: 7,
+    period: 'Oct 2021 – Oct 2024',
+    role: 'Data Analyst & VP, Board of Directorate',
+    org: 'Dejeselam Trading and Apartama S.C',
+    location: 'Debre Berhan, Ethiopia',
+    tag: 'Analytics',
+    tagColor: '#f97316',
+    category: 'Industry',
+    description: 'Drove data-driven decision making through analytics, dashboards, and predictive modeling while supporting corporate governance.',
+    points: [
+      'Built Power BI and Excel dashboards for real-time KPI tracking',
+      'Applied Python (Pandas, NumPy, Scikit-learn) for EDA and predictive modeling',
+      'Wrote and optimized SQL queries for MySQL and MongoDB enterprise databases',
+      'Supported board governance and acted as Chairperson in the President\'s absence',
+    ],
+  },
+];
+
+// ─── PROJECTS ───────────────────────────────────────────────────────────────
+export const projects = [
+  {
+    id: 1,
+    title: 'gCODE Technologies',
+    subtitle: 'Tech Startup · Founder & GM',
+    category: 'Entrepreneurship',
+    description: 'Founded and built a digital solutions company delivering software development, IT consulting, and digital transformation services to businesses in Ethiopia.',
+    tags: ['Software Development', 'IT Consulting', 'Digital Transformation', 'Team Leadership'],
+    icon: 'Code2',
+    color: '#f59e0b',
+    year: '2024',
+    status: 'Active',
+    image: '/orbit.jpg',
+    imageDesc: 'Technology solutions for Ethiopian businesses',
+  },
+  {
+    id: 2,
+    title: 'SEED Digital Linkage Lab',
+    subtitle: 'MasterCard Foundation Program',
+    category: 'Digital Strategy',
+    description: 'Led a MasterCard Foundation-partnered program that strengthened 21 medium enterprises\' digital presence through social media strategy, branding, and digital capacity building.',
+    tags: ['Digital Marketing', 'SME Mentorship', 'Social Media Strategy', 'Capacity Building'],
+    icon: 'TrendingUp',
+    color: '#10b981',
+    year: '2025',
+    status: 'Active',
+    image: null,
+    imageDesc: 'Supporting 21 enterprises in digital transformation',
+  },
+  {
+    id: 3,
+    title: 'HRMS Requirements Engineering',
+    subtitle: 'Qelem Meda Technologies',
+    category: 'Business Analysis',
+    description: 'Led comprehensive requirements engineering for a Human Resource Management System, creating AS-IS/TO-BE process models, BRDs, use cases and facilitating UAT.',
+    tags: ['Requirements Gathering', 'Process Modeling', 'BRD', 'UAT', 'Agile/Scrum'],
+    icon: 'FileSearch',
+    color: '#3b82f6',
+    year: '2024',
+    status: 'Delivered',
+    image: null,
+    imageDesc: 'End-to-end business analysis for enterprise HR system',
+  },
+  {
+    id: 4,
+    title: 'Fog Computing Research',
+    subtitle: 'Academic Publication',
+    category: 'Research',
+    description: 'Published original research on task scheduling algorithms designed to reduce response time over fog computing environments — advancing IoT and edge computing architectures.',
+    tags: ['Fog Computing', 'Task Scheduling', 'Algorithm Design', 'Research', 'Publication'],
+    icon: 'BookOpen',
+    color: '#8b5cf6',
+    year: '2022',
+    status: 'Published',
+    image: null,
+    imageDesc: 'Research on fog computing optimization',
+  },
+  {
+    id: 5,
+    title: 'Business Intelligence Dashboard Suite',
+    subtitle: 'Dejeselam Trading & Apartama S.C',
+    category: 'Data Analytics',
+    description: 'Designed and developed interactive Power BI and Excel dashboards for real-time KPI tracking across HR, loan performance, and student progress metrics.',
+    tags: ['Power BI', 'Excel', 'KPI Design', 'Python', 'SQL', 'Predictive Modeling'],
+    icon: 'BarChart3',
+    color: '#f97316',
+    year: '2022',
+    status: 'Delivered',
+    image: null,
+    imageDesc: 'Real-time business intelligence dashboards',
+  },
+  {
+    id: 6,
+    title: 'Dejeselam Trading & Apartama S.C',
+    subtitle: 'Co-Founder · Board President',
+    category: 'Entrepreneurship',
+    description: 'Co-founded and guided a multi-sector company from concept to full operation, providing strategic leadership as Board President and earlier as Vice President.',
+    tags: ['Corporate Governance', 'Strategic Leadership', 'Business Development', 'Risk Management'],
+    icon: 'Building2',
+    color: '#ec4899',
+    year: '2021',
+    status: 'Active',
+    image: null,
+    imageDesc: 'Corporate leadership and governance',
+  },
+];
+
+// ─── SKILLS ─────────────────────────────────────────────────────────────────
+export const skills = [
+  {
+    title: 'Business Analysis',
+    icon: 'Search',
+    color: '#3b82f6',
+    level: 95,
+    tags: ['Requirements Gathering', 'BRD / FSD', 'Use Case Diagrams', 'User Stories', 'Gap Analysis', 'SWOT Analysis', 'Process Modeling', 'UAT Design', 'Stakeholder Engagement'],
+  },
+  {
+    title: 'Data & Analytics',
+    icon: 'BarChart2',
+    color: '#f97316',
+    level: 88,
+    tags: ['Python (Pandas, NumPy)', 'Scikit-learn', 'Power BI', 'SQL (MySQL)', 'MongoDB', 'Excel / Tableau', 'Google Sheets', 'EDA', 'Predictive Modeling'],
+  },
+  {
+    title: 'Leadership & Governance',
+    icon: 'Users',
+    color: '#8b5cf6',
+    level: 92,
+    tags: ['Strategic Leadership', 'Corporate Governance', 'Budgeting & Planning', 'Performance Monitoring', 'Policy Development', 'Risk Oversight', 'Team Building'],
+  },
+  {
+    title: 'Tools & Platforms',
+    icon: 'Wrench',
+    color: '#10b981',
+    level: 90,
+    tags: ['Jira', 'Confluence', 'Figma', 'Lucidchart', 'Draw.io', 'Bizagi Modeler', 'VS Code', 'Microsoft Suite', 'React / Node.js', 'Miro / Notion'],
+  },
+  {
+    title: 'Agile & Digital Marketing',
+    icon: 'Zap',
+    color: '#f59e0b',
+    level: 87,
+    tags: ['Scrum', 'Sprint Planning', 'Backlog Grooming', 'Product Ownership', 'Social Media Strategy', 'Digital Branding', 'Campaign Management'],
+  },
+  {
+    title: 'Academic & Research',
+    icon: 'GraduationCap',
+    color: '#ec4899',
+    level: 93,
+    tags: ['Curriculum Development', 'Academic Mentorship', 'Research Supervision', 'Assessment Design', 'Fog Computing', 'Cloud Computing', 'LMS Management'],
+  },
+];
+
+// ─── CERTIFICATIONS ─────────────────────────────────────────────────────────
+export const certifications = [
+  { icon: 'Trophy', name: 'Product Owner Certification', date: 'Sep 26, 2025', issuer: 'Agile Enterprise Coach · ID: 1004972', color: '#f59e0b' },
+  { icon: 'BarChart2', name: 'Google Data Analytics Professional', date: 'Dec 12, 2023', issuer: 'Google / Coursera', color: '#3b82f6', link: 'https://www.credly.com/go/97HQeTDx' },
+  { icon: 'Cloud', name: 'Cloud Computing from Scratch', date: 'Oct 31, 2022', issuer: 'Online Certification', color: '#06b6d4' },
+  { icon: 'Brain', name: 'Business Intelligence Fundamental', date: 'May 28, 2022', issuer: 'Online Certification', color: '#8b5cf6' },
+  { icon: 'Code2', name: 'Scientific Computing with Python', date: 'Jul 26, 2022', issuer: 'freeCodeCamp', color: '#10b981' },
+  { icon: 'Globe', name: 'National Youth Digital Peace Fellowship', date: '2023', issuer: 'EYDPA · Life & Peace Institute · Sweden', color: '#ec4899', image: '/cert.jpeg' },
+  { icon: 'Rocket', name: 'SEED Program — Certificate of Participation', date: '2025', issuer: 'Orbit Innovation Hub · MasterCard Foundation · EDI', color: '#f97316' },
+  { icon: 'Medal', name: 'Certificate of Recognition — EPSU', date: '2018', issuer: 'Ethiopian Police University', color: '#6b7280' },
+];
+
+// ─── EDUCATION ──────────────────────────────────────────────────────────────
+export const education = [
+  {
+    degree: 'Master of Science',
+    field: 'Software Engineering',
+    school: 'Addis Ababa Science and Technology University',
+    college: 'College of Mechanical & Electrical Engineering',
+    period: '2018 – 2021',
+    icon: 'GraduationCap',
+    color: '#f59e0b',
+    highlights: ['Advanced Systems Design', 'Research Methods', 'Cloud & Fog Computing', 'Software Architecture'],
+  },
+  {
+    degree: 'Bachelor of Science',
+    field: 'Software Engineering',
+    school: 'Haramaya University',
+    college: 'College of Computing and Informatics',
+    period: '2013 – 2017',
+    icon: 'BookOpen',
+    color: '#3b82f6',
+    highlights: ['Software Development', 'Database Systems', 'Computer Networks', 'Project Management'],
+  },
+];
+
+// ─── ACHIEVEMENTS ───────────────────────────────────────────────────────────
+export const achievements = [
+  { icon: 'Rocket', title: 'Founded gCODE Technologies', desc: 'Built a digital solutions company advancing local tech capacity and digital transformation in Ethiopia.', color: '#f59e0b' },
+  { icon: 'Building2', title: 'Co-Founded Dejeselam S.C', desc: 'Guided the company from concept to full operation, currently serving as Board President.', color: '#8b5cf6' },
+  { icon: 'Users', title: 'Mentored 21 Enterprises', desc: 'Led MasterCard Foundation-partnered SEED program, strengthening 21 SMEs\' digital market presence.', color: '#10b981' },
+  { icon: 'BookOpen', title: 'Research Publication', desc: 'Published: Task Scheduling Algorithm to Reduce Response Time Over Fog Computing Environment.', color: '#3b82f6' },
+];
+
+// ─── TICKER ─────────────────────────────────────────────────────────────────
+export const ticker = [
+  'MSc Software Engineering',
+  'Product Owner Certified',
+  'Google Data Analytics',
+  '6+ Years Lecturing',
+  '2 Companies Founded',
+  '21 SMEs Supported',
+  'SEED Program Leader',
+  'MasterCard Foundation Partner',
+  'Fog Computing Research',
+  'Digital Transformation Expert',
+];
