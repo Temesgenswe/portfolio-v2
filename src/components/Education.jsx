@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import { useScrollReveal } from './useScrollReveal';
 import { education, achievements } from '../data/portfolio';
-import { GraduationCap, BookOpen, CheckCircle2, Rocket, Building2, Users, Trophy } from 'lucide-react';
+import { GraduationCap, BookOpen, CheckCircle2, Rocket, Building2, Users, Trophy, FileText } from 'lucide-react';
 
 const eduIconMap = { GraduationCap, BookOpen };
-const achIconMap = { Rocket, Building2, Users, BookOpen, Trophy };
+const achIconMap = { Rocket, Building2, Users, BookOpen, Trophy, FileText };
 
 export default function Education() {
   const [ref, visible] = useScrollReveal(0.1);

@@ -19,8 +19,8 @@ export default function App() {
       <ParticleCanvas />
       <Navbar />
       <main>
-        <Hero />
-        <Ticker />
+        {/* <Hero />
+        <Ticker /> */}
         <About />
         <Experience />
         <Projects />

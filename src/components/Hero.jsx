@@ -111,34 +111,67 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="relative hidden lg:flex flex-col gap-6">
 
-          {/* Photo card */}
-          <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl aspect-[4/5] max-h-[480px]"
-              style={{ border: '1px solid rgba(245,158,11,0.2)' }}>
+          {/* Photo — circular, animated */}
+          <div className="relative flex justify-center py-6">
+            {/* Rotating dashed ring */}
+            <motion.div
+              className="absolute rounded-full pointer-events-none"
+              style={{
+                width: 'min(360px, 78%)', height: 'min(360px, 78%)',
+                border: '1px dashed rgba(245,158,11,0.35)',
+              }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
+            />
+            {/* Slow counter-rotating outer ring */}
+            <motion.div
+              className="absolute rounded-full pointer-events-none"
+              style={{
+                width: 'min(400px, 88%)', height: 'min(400px, 88%)',
+                border: '1px solid rgba(59,130,246,0.18)',
+              }}
+              animate={{ rotate: -360 }}
+              transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
+            />
+            {/* Pulsing glow behind photo */}
+            <motion.div
+              className="absolute rounded-full pointer-events-none"
+              style={{
+                width: 'min(320px, 70%)', height: 'min(320px, 70%)',
+                background: 'radial-gradient(circle, rgba(245,158,11,0.25) 0%, transparent 70%)',
+              }}
+              animate={{ scale: [1, 1.08, 1], opacity: [0.6, 0.9, 0.6] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+            />
+
+            <motion.div
+              className="relative rounded-full overflow-hidden flex-shrink-0"
+              style={{
+                width: 'min(300px, 64%)', height: 'min(300px, 64%)',
+                border: '3px solid rgba(245,158,11,0.4)',
+                boxShadow: '0 0 0 8px rgba(11,17,32,0.9), 0 20px 60px -12px rgba(245,158,11,0.35)',
+              }}
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              whileHover={{ scale: 1.04 }}
+              transition={{ duration: 0.9, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            >
               <img src="/temesgen.png" alt="Temesgen Teshome"
                 className="w-full h-full object-cover object-top"
                 style={{ filter: 'contrast(1.05) saturate(0.9)' }}
                 onError={e => {
                   e.target.style.display = 'none';
                   e.target.parentElement.style.background = 'linear-gradient(135deg,#0f1829,#152035)';
-                  e.target.parentElement.innerHTML += `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:7rem;font-weight:300;color:rgba(245,158,11,0.2)">T</div>`;
+                  e.target.parentElement.innerHTML += `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:5rem;font-weight:300;color:rgba(245,158,11,0.2)">T</div>`;
                 }} />
-              <div className="absolute inset-0 pointer-events-none"
-                style={{ background: 'linear-gradient(to top, rgba(11,17,32,0.6) 0%, transparent 50%)' }} />
-              {/* Name overlay */}
-              <div className="absolute bottom-6 left-6">
-                <div className="font-display text-lg font-light text-cream">Temesgen Teshome</div>
-                <div className="font-mono text-[0.65rem] tracking-widest text-teal uppercase mt-1">Software Engineer · Entrepreneur</div>
-              </div>
-            </div>
-            {/* Frame accent */}
-            <div className="absolute -top-3 -right-3 w-16 h-16 rounded-xl opacity-20"
-              style={{ border: '2px solid #f59e0b' }} />
-            <div className="absolute -bottom-3 -left-3 w-16 h-16 rounded-xl opacity-20"
-              style={{ border: '2px solid #3b82f6' }} />
+            </motion.div>
 
             {/* Floating badge */}
-            <div className="absolute -right-4 top-1/3 rounded-xl p-3 shadow-xl"
+            <motion.div
+              initial={{ opacity: 0, x: 16 }}
+              animate={{ opacity: 1, x: 0, y: [0, -6, 0] }}
+              transition={{ opacity: { duration: 0.6, delay: 1 }, x: { duration: 0.6, delay: 1 }, y: { duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 1.4 } }}
+              className="absolute right-2 bottom-4 rounded-xl p-3 shadow-xl"
               style={{ background: 'rgba(15,24,41,0.95)', border: '1px solid rgba(245,158,11,0.25)', backdropFilter: 'blur(10px)' }}>
               <div className="flex items-center gap-2">
                 <CheckCircle size={14} className="text-teal" />
@@ -147,7 +180,16 @@ export default function Hero() {
                   <div className="font-mono text-[0.6rem] text-slate">AASTU</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
+
+            {/* Name tag */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.15 }}
+              className="absolute left-0 top-2 text-center w-full">
+              <div className="font-mono text-[0.62rem] tracking-widest text-teal uppercase">Software Engineer · Entrepreneur</div>
+            </motion.div>
           </div>
 
           {/* Stats row */}

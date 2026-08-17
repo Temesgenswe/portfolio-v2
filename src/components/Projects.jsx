@@ -2,14 +2,23 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useScrollReveal } from './useScrollReveal';
 import { projects } from '../data/portfolio';
-import { Code2, TrendingUp, FileSearch, BookOpen, BarChart3, Building2, ExternalLink, Tag } from 'lucide-react';
+import {
+  Code2, TrendingUp, FileSearch, BookOpen, BarChart3, Building2,
+  Layers, GraduationCap, IdCard, Scale, Store, LayoutGrid,
+  ExternalLink, Tag,
+} from 'lucide-react';
 
-const iconMap = { Code2, TrendingUp, FileSearch, BookOpen, BarChart3, Building2 };
+const iconMap = {
+  Code2, TrendingUp, FileSearch, BookOpen, BarChart3, Building2,
+  Layers, GraduationCap, IdCard, Scale, Store, LayoutGrid,
+};
 
 const statusStyle = {
   Active: { bg: 'rgba(16,185,129,0.12)', color: '#10b981', border: 'rgba(16,185,129,0.3)' },
   Delivered: { bg: 'rgba(59,130,246,0.12)', color: '#3b82f6', border: 'rgba(59,130,246,0.3)' },
   Published: { bg: 'rgba(139,92,246,0.12)', color: '#8b5cf6', border: 'rgba(139,92,246,0.3)' },
+  Deployed: { bg: 'rgba(16,185,129,0.12)', color: '#10b981', border: 'rgba(16,185,129,0.3)' },
+  'In Progress': { bg: 'rgba(245,158,11,0.12)', color: '#f59e0b', border: 'rgba(245,158,11,0.3)' },
 };
 
 const categoryColors = {
@@ -18,7 +27,10 @@ const categoryColors = {
   'Business Analysis': '#3b82f6',
   Research: '#8b5cf6',
   'Data Analytics': '#f97316',
+  Product: '#06b6d4',
 };
+
+const filters = ['All', 'Product', 'Entrepreneurship', 'Digital Strategy', 'Business Analysis', 'Research', 'Data Analytics'];
 
 function ProjectCard({ proj, index }) {
   const [ref, visible] = useScrollReveal(0.1);
@@ -82,27 +94,57 @@ function ProjectCard({ proj, index }) {
           <Tag size={10} />{proj.imageDesc}
         </div>
         {/* Tags */}
-        <div className="flex flex-wrap gap-1.5">
+        <div className="flex flex-wrap gap-1.5 mb-4">
           {proj.tags.map(t => (
             <span key={t} className="tag">{t}</span>
           ))}
         </div>
+
+        {/* Live link */}
+        {proj.link && (
+          <a href={proj.link} target="_blank" rel="noopener noreferrer"
+            className="mt-auto inline-flex items-center gap-1.5 font-mono text-[0.68rem] tracking-wide pt-3"
+            style={{ color: proj.color, borderTop: '1px solid rgba(148,163,184,0.12)' }}>
+            <ExternalLink size={12} />
+            {proj.linkLabel || 'View Live'}
+          </a>
+        )}
       </div>
     </motion.div>
   );
 }
 
 export default function Projects() {
+  const [filter, setFilter] = useState('All');
+  const shown = filter === 'All' ? projects : projects.filter(p => p.category === filter);
+
   return (
     <section id="projects" className="relative z-10 py-28 px-6 md:px-12 lg:px-20"
       style={{ background: 'linear-gradient(180deg, #0f1829 0%, #0b1120 100%)' }}>
       <div className="max-w-7xl mx-auto">
-        <div className="sec-label">Portfolio Highlights</div>
-        <h2 className="sec-heading">Featured <em>Projects</em></h2>
+        <div className="sec-label">Products & Portfolio Highlights</div>
+        <h2 className="sec-heading">Projects &amp; <em>Products</em></h2>
         <div className="sec-divider" />
+        <p className="max-w-2xl -mt-6 mb-10 text-[0.85rem] leading-relaxed" style={{ color: 'rgba(241,245,249,0.5)' }}>
+          Deployed platforms, active builds, and consulting engagements — spanning government
+          HR systems, school ERPs, SaaS products, and AI-driven tools.
+        </p>
+
+        {/* Filter tabs */}
+        <div className="flex flex-wrap gap-2 mb-10">
+          {filters.map(f => (
+            <button key={f} onClick={() => setFilter(f)}
+              className="font-mono text-[0.65rem] tracking-wide uppercase px-3.5 py-1.5 rounded-full transition-colors"
+              style={filter === f
+                ? { background: 'rgba(245,158,11,0.15)', color: '#f59e0b', border: '1px solid rgba(245,158,11,0.4)' }
+                : { background: 'transparent', color: 'rgba(148,163,184,0.6)', border: '1px solid rgba(148,163,184,0.15)' }}>
+              {f}
+            </button>
+          ))}
+        </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((p, i) => <ProjectCard key={p.id} proj={p} index={i} />)}
+          {shown.map((p, i) => <ProjectCard key={p.id} proj={p} index={i} />)}
         </div>
       </div>
     </section>
