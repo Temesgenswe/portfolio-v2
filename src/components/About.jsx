@@ -507,11 +507,11 @@ export default function About() {
 
                   <div>
                     <div className="font-sans text-[0.7rem] font-semibold text-cream">
-                      MSc Software Engineering
+                      Lecturer, Researcher, Mentor/Advisor 
                     </div>
 
                     <div className="font-mono text-[0.58rem] text-slate">
-                      AASTU
+                      Ethiopian Public Service University
                     </div>
                   </div>
                 </div>
@@ -552,11 +552,11 @@ export default function About() {
 
                   <div>
                     <div className="font-sans text-[0.7rem] font-semibold text-cream">
-                      SEED Program Leader
+                      Business Analyst
                     </div>
 
                     <div className="font-mono text-[0.58rem] text-slate">
-                      MasterCard Foundation
+                      Qelem Meda Technologies
                     </div>
                   </div>
                 </div>
